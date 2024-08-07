@@ -9,13 +9,14 @@
 
 const fetchWithRetry=(url,retries)=>{
     return new Promise(async(resolve,reject)=>{
+        
         var i = 1;
       while(i<=retries){
 
       
         await fetch(url).then(response => {
                     if (!response.ok) {
-                        throw new Error(`HTTP error! Status: ${response.status}`);
+                        throw new Error("Errorrr!!");
                     }
                     return response.json();
                 })
@@ -26,6 +27,7 @@ const fetchWithRetry=(url,retries)=>{
                 });
                 i++;
         }
+        
         reject(`Failed after ${retries} retries!`);
 
        
@@ -34,7 +36,11 @@ const fetchWithRetry=(url,retries)=>{
 
 fetchWithRetry('https://jsonplaceholdr.typicode.com/posts', 3)
     .then(data => console.log('Data fetched successfully:', data))
-    .catch(error => console.error('Error:', error));
+    .catch(error => console.log(error));
+
+
+
+
 
 // const fetchWithRetry = (url, retries) => new Promise((resolve, reject) => {
 //     const attemptFetch = (attemptsLeft) => {
