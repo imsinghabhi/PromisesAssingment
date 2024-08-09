@@ -1,7 +1,3 @@
-//DONE BY MY OWN
-
-
-
 // Part 2: Chaining Promises
 // Print out "Program started" at the start of your code.
 // Create a Promise that resolves after 3 seconds.

@@ -14,14 +14,14 @@ const fetchWithRetry=(url,retries)=>{
       while(i<=retries){
 
       
-        await fetch(url).then(response => {
+        await fetch(url).then((response )=> {
                     if (!response.ok) {
                         throw new Error("Errorrr!!");
                     }
                     return response.json();
                 })
-                .then(data => resolve(data))
-                .catch(error => {
+                .then((data) => resolve(data))
+                .catch(()=> {
                     console.log(`Retrying... Attempts left: ${retries-i}`);
                     
                 });

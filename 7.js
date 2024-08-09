@@ -1,7 +1,7 @@
 function fetchWithRace(urls, timeout) {
     return new Promise((resolve, reject) => {
     
-        const timeoutPromise = new Promise((_, rejectTimeout) => {
+        const timeoutPromise = new Promise(( rejectTimeout) => {
             setTimeout(() => {
                 rejectTimeout(new Error('Request timed out'));
             }, timeout);

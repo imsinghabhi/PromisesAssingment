@@ -1,6 +1,3 @@
-//DONE BY MY OWN
-
-
 // Part 1: Basic Promise Handling
 // Print out "Program started" at the start of your code.
 // Create a Promise that resolves after 3 seconds and rejects after 2 seconds.

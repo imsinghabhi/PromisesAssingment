@@ -1,6 +1,3 @@
-//DONE BY MY OWN
-
-
 // Part 3: Advanced Promise Chaining
 // Print out "Program started" at the start of your code.
 // Create a Promise that resolves after 5 seconds with the value {data: "Hello, friend!", error: null}.

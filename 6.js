@@ -1,5 +1,3 @@
-//done by my own
-
 // 1. Create a function fetchAllWithErrors 
 // that takes an array of URLs and returns a
 //  promise. This promise should resolve with an

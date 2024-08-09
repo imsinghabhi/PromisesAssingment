@@ -8,28 +8,23 @@
 
 
 
-
-
-
 function fetchWithTimeout(url, timeout) {
-    return new Promise((resolve, reject) => {
-        setTimeout(async() => {
-
-            try {
-                const response = await fetch(url);
-                if (!response.ok) {
-                    throw new Error('ERRRROR');
-                }
-                const data = await response.json();
-                resolve(data);
-            } catch (error) {
-                reject(error);
-            }
-
-
-            reject(new Error('timed out'));
+    return new Promise(async (resolve, reject) => {
+        setTimeout(() => {
+      
+        reject(new Error('timed out'));
         }, timeout);
-
+        
+        try {
+            const response = await fetch(url);
+            if (!response.ok) {
+                throw new Error('ERRRROR');
+            }
+            const data = await response.json();
+            resolve(data);
+        } catch (error) {
+            reject(error);
+        }
        
     });
 }
